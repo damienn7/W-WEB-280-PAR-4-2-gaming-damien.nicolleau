@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js tutorial</title>
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- <img src="./img/nebula.jpg" alt="nebula"> -->
+    <!-- 
+    <script type="x-shader/x-vertex"></script> ->  point
+    <script type="x-shader/x-fragment"></script> -> assign a position of a point, giving a color
+    -->
+    <script id="vertexShader" type="vertex">
+        void main() {
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+    </script>
+    <script id="fragmentShader" type="fragment">
+        void main() {
+            gl_FragColor = vec4(0.5, 0.5, 1.0, 1.0);
+        }
+    </script>
+    <script type="x-shader/x-vertex"></script>
+    <script src="./js/three.js" type="module"></script>
+</body>
+</html>
